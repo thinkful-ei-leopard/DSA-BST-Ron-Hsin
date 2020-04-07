@@ -50,8 +50,38 @@ class BinarySearchTree{
       }
     }
   }
+
+  find(key){
+    // If the item is found at the root then return that value
+    if (this.key === key) {
+      return this.value;
+    }
+    /* If the item you are looking for is less than the root 
+           then follow the left child.
+           If there is an existing left child, 
+           then recursively check its left and/or right child
+           until you find the item */
+    else if (key < this.key && this.left) {
+      return this.left.find(key);
+    }
+
+    else if(key > this.key && this.right) {
+      return this.right.find(key);
+    } 
+
+    else {
+      throw new Error('Key error');
+    }
+  }
 }
 
-let bst = new BinarySearchTree();
-bst.insert(89);
-bst.insert(76);
+function createBST() {
+  let bst = new BinarySearchTree();
+  bst.insert(89, 89);
+  bst.insert(76, 76);
+  bst.insert(39, 39);
+  return bst;
+}
+
+
+console.log(createBST());

@@ -1,6 +1,7 @@
 const BinarySearchTree = require('./BST');
 const {findHeight} = require('./height-of-BST');
 const {investigateBST} = require('./investigate-BST');
+const {thirdLargest} = require('./third-largest-node');
 
 function createBST() {
   let bst = new BinarySearchTree();
@@ -47,4 +48,5 @@ function createBST2() {
 //console.log(createBST2());
 
 // console.log(findHeight(createBST()));
-console.log(investigateBST(createBST()));
+//console.log(investigateBST(createBST()));
+console.log(thirdLargest(createBST()));

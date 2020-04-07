@@ -43,10 +43,10 @@ class BinarySearchTree{
     then you do the same thing, but on the right-hand side */
     else{
       if(this.right === null){
-        this.right =new BinarySearchTree(key, value, this);
+        this.right = new BinarySearchTree(key, value, this);
       }
       else{
-        this.this.right.insert(key, value);
+        this.right.insert(key, value);
       }
     }
   }
@@ -136,11 +136,35 @@ class BinarySearchTree{
 
 function createBST() {
   let bst = new BinarySearchTree();
-  bst.insert(89, 89);
-  bst.insert(76, 76);
-  bst.insert(39, 39);
+  bst.insert(3, 3);
+  bst.insert(1, 1);
+  bst.insert(4, 4);
+  bst.insert(6, 6);
+  bst.insert(9, 9);
+  bst.insert(2, 2);
+  bst.insert(5, 5);
+  bst.insert(7, 7);
   return bst;
 }
 
-
 console.log(createBST());
+
+function createBST2() {
+  let bst = new BinarySearchTree();
+  bst.insert('E');
+  bst.insert('A');
+  bst.insert('S');
+  bst.insert('Y');
+  bst.insert('Q');
+  bst.insert('U');
+  bst.insert('E');
+  bst.insert('S');
+  bst.insert('T');
+  bst.insert('I');
+  bst.insert('O');
+  bst.insert('N');
+
+  return bst;
+}
+
+console.log(createBST2());

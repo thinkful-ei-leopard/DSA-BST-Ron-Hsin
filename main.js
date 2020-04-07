@@ -1,4 +1,5 @@
 const BinarySearchTree = require('./BST');
+const {findHeight} = require('./height-of-BST');
 
 function createBST() {
   let bst = new BinarySearchTree();
@@ -10,10 +11,14 @@ function createBST() {
   bst.insert(2, 2);
   bst.insert(5, 5);
   bst.insert(7, 7);
+  bst.insert(17, 17);
+  bst.insert(27, 27);
+  bst.insert(37, 37);
+  bst.insert(47, 47);
   return bst;
 }
 
-console.log(createBST());
+//console.log(createBST());
   
 function createBST2() {
   let bst = new BinarySearchTree();
@@ -33,6 +38,6 @@ function createBST2() {
   return bst;
 }
   
-console.log(createBST2());
+//console.log(createBST2());
 
-
+console.log(findHeight(createBST()));
